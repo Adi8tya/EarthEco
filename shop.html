@@ -1,343 +1,286 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
-
 <head>
-    <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
-    <meta content="" name="description">
-    <meta content="" name="author">
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Shop</title>
 
-    <!-- font awesome cdn link  -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
-    <!-- swiper css link  -->
-    <link href="https://unpkg.com/swiper@7/swiper-bundle.min.css" rel="stylesheet"/>
+   <!-- swiper css link  -->
+   <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
 
-    <!-- custom css file link  -->
-    <link href="./static/css/style.css" rel="stylesheet">
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="./static/css/style.css">
 
-    <title>Shop</title>
-    <!-- CSS FILES START -->
-    <link href="css/custom.css" rel="stylesheet">
-    <link href="css/color.css" rel="stylesheet">
-    <link href="css/responsive.css" rel="stylesheet">
-    <link href="css/owl.carousel.min.css" rel="stylesheet">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/prettyPhoto.css" rel="stylesheet">
-    <link href="css/all.min.css" rel="stylesheet">
-    <!-- CSS FILES End -->
 </head>
 <body>
 <div class="wrapper">
-    <!--Header Start-->
-    <!-- header section starts  -->
+<!-- header section starts  -->
 
-    <header class="header">
+<header class="header">
 
-        <a class="logo" href="#"> <i class="fas fa-lightbulb"></i> EcoEarth </a>
+   <a href="#" class="logo"> <i class="fas fa-lightbulb"></i> EcoEarth </a>
 
-        <nav class="navbar">
-            <div class="fas fa-times" id="close-navbar"></div>
-            <a href="index.html">home</a>
-            <a href="./static/about.html">about</a>
-            <a href="./static/courses.html">Blogs</a>
-            <a href="./static/contact.html">contact</a>
-        </nav>
+   <nav class="navbar">
+      <div id="close-navbar" class="fas fa-times"></div>
+      <a href="index.html">home</a>
+      <a href="./static/about.html">about</a>
+      <a href="./static/courses.html">Blogs</a>
+      <a href="./static/contact.html">contact</a>
+   </nav>
 
-        <div class="icons">
-            <div class="fas fa-user" id="account-btn"></div>
-            <div class="fas fa-bars" id="menu-btn"></div>
-        </div>
+   <div class="icons">
+      <div id="account-btn" class="fas fa-user"></div>
+      <div id="menu-btn" class="fas fa-bars"></div>
+   </div>
 
-    </header>
+</header>
 
-    <!-- account form section starts  -->
+<!-- account form section starts  -->
 
-    <div class="account-form">
+<div class="account-form">
 
-        <div class="fas fa-times" id="close-form"></div>
+   <div id="close-form" class="fas fa-times"></div>
 
-        <div class="buttons">
-            <span class="btn active login-btn">login</span>
-            <span class="btn register-btn">register</span>
-        </div>
+   <div class="buttons">
+      <span class="btn active login-btn">login</span>
+      <span class="btn register-btn">register</span>
+   </div>
 
-        <form action="" class="login-form active">
-            <h3>login now</h3>
-            <input class="box" placeholder="enter your email" type="email">
-            <input class="box" placeholder="enter your password" type="password">
-            <div class="flex">
-                <input id="remember-me" name="" type="checkbox">
-                <label for="remember-me">remember me</label>
-                <a href="#">forgot password?</a>
+   <form class="login-form active" action="">
+      <h3>login now</h3>
+      <input type="email" placeholder="enter your email" class="box">
+      <input type="password" placeholder="enter your password" class="box">
+      <div class="flex">
+         <input type="checkbox" name="" id="remember-me">
+         <label for="remember-me">remember me</label>
+         <a href="#">forgot password?</a>
+      </div>
+      <input type="submit" value="login now" class="btn">
+   </form>
+
+   <form class="register-form" action="">
+      <h3>register now</h3>
+      <input type="email" placeholder="enter your email" class="box">
+      <input type="password" placeholder="enter your password" class="box">
+      <input type="password" placeholder="confirm your password" class="box">
+      <input type="submit" value="register now" class="btn">
+   </form>
+
+</div>
+
+<!-- account form section ends -->
+
+<!-- header section ends -->
+
+<section class="courses">
+
+   <h1 class="heading"> Shop </h1>
+
+   <div class="box-container">
+
+      <div class="box">
+         <div class="image">
+            <img src="store/images/store1.jpg" alt="">
+         </div>
+         <div class="content">
+            <h3>Happy Eco Shirt</h3>
+            <a href="#" class="btn">Add to Cart</a>
+            <br>
+            <br>
+            <h2>$18.00</h2>
+         </div>
+      </div>
+
+      <div class="box">
+         <div class="image">
+            <img src="images/course-2-2.jpg" alt="">
+            <h3>engineering</h3>
+         </div>
+         <div class="content">
+            <h3>choose what's best for you!</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque, odit!</p>
+            <a href="#" class="btn">read more</a>
+            <div class="icons">
+               <span> <i class="fas fa-book"></i> 12 modules </span>
+               <span> <i class="fas fa-clock"></i> 6 hours </span>
             </div>
-            <input class="btn" type="submit" value="login now">
-        </form>
+         </div>
+      </div>
 
-        <form action="" class="register-form">
-            <h3>register now</h3>
-            <input class="box" placeholder="enter your email" type="email">
-            <input class="box" placeholder="enter your password" type="password">
-            <input class="box" placeholder="confirm your password" type="password">
-            <input class="btn" type="submit" value="register now">
-        </form>
-
-    </div>
-
-    <!-- account form section ends -->
-
-    <!-- header section ends -->
-
-
-    <!--Header End-->
-
-    <!--Contact Start-->
-    <section class="shop wf100 p80">
-        <div class="container">
-            <div class="row">
-                <!--Pro Box Start-->
-                <div class="col-md-4 col-sm-6">
-                    <div class="product-box">
-                        <div class="pro-thumb"><a href="#">Add To Cart</a> <img alt="" src="images/shop/pro1.jpg"></div>
-                        <div class="pro-txt">
-                            <h6><a href="#">Happy Ninja Shirt</a></h6>
-                            <p class="pro-price">
-                                <del>$25.00</del>
-                                $19.00
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <!--Pro Box End-->
-                <!--Pro Box Start-->
-                <div class="col-md-4 col-sm-6">
-                    <div class="product-box">
-                        <div class="pro-thumb"><a href="#">Add To Cart</a> <img alt="" src="images/shop/pro2.jpg"></div>
-                        <div class="pro-txt">
-                            <h6><a href="#">Woo corlor shirt</a></h6>
-                            <p class="pro-price">
-                                <del>$25.00</del>
-                                $19.00
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <!--Pro Box End-->
-                <!--Pro Box Start-->
-                <div class="col-md-4 col-sm-6">
-                    <div class="product-box">
-                        <div class="pro-thumb"><a href="#">Add To Cart</a> <img alt="" src="images/shop/pro3.jpg"></div>
-                        <div class="pro-txt">
-                            <h6><a href="#">Premium Quality</a></h6>
-                            <p class="pro-price">
-                                <del>$25.00</del>
-                                $19.00
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <!--Pro Box End-->
-                <!--Pro Box Start-->
-                <div class="col-md-4 col-sm-6">
-                    <div class="product-box">
-                        <div class="pro-thumb"><a href="#">Add To Cart</a> <img alt="" src="images/shop/pro4.jpg"></div>
-                        <div class="pro-txt">
-                            <h6><a href="#">Ninja Silhouette</a></h6>
-                            <p class="pro-price">
-                                <del>$25.00</del>
-                                $19.00
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <!--Pro Box End-->
-                <!--Pro Box Start-->
-                <div class="col-md-4 col-sm-6">
-                    <div class="product-box">
-                        <div class="pro-thumb"><a href="#">Add To Cart</a> <img alt="" src="images/shop/pro5.jpg"></div>
-                        <div class="pro-txt">
-                            <h6><a href="#">Happy Ninja Shirt</a></h6>
-                            <p class="pro-price">
-                                <del>$25.00</del>
-                                $19.00
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <!--Pro Box End-->
-                <!--Pro Box Start-->
-                <div class="col-md-4 col-sm-6">
-                    <div class="product-box">
-                        <div class="pro-thumb"><a href="#">Add To Cart</a> <img alt="" src="images/shop/pro6.jpg"></div>
-                        <div class="pro-txt">
-                            <h6><a href="#">Woo corlor shirt</a></h6>
-                            <p class="pro-price">
-                                <del>$25.00</del>
-                                $19.00
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <!--Pro Box End-->
-                <!--Pro Box Start-->
-                <div class="col-md-4 col-sm-6">
-                    <div class="product-box">
-                        <div class="pro-thumb"><a href="#">Add To Cart</a> <img alt="" src="images/shop/pro7.jpg"></div>
-                        <div class="pro-txt">
-                            <h6><a href="#">Premium Quality</a></h6>
-                            <p class="pro-price">
-                                <del>$25.00</del>
-                                $19.00
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <!--Pro Box End-->
-                <!--Pro Box Start-->
-                <div class="col-md-4 col-sm-6">
-                    <div class="product-box">
-                        <div class="pro-thumb"><a href="#">Add To Cart</a> <img alt="" src="images/shop/pro8.jpg"></div>
-                        <div class="pro-txt">
-                            <h6><a href="#">Ninja Silhouette</a></h6>
-                            <p class="pro-price">
-                                <del>$25.00</del>
-                                $19.00
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <!--Pro Box End-->
-                <!--Pro Box Start-->
-                <div class="col-md-4 col-sm-6">
-                    <div class="product-box">
-                        <div class="pro-thumb"><a href="#">Add To Cart</a> <img alt="" src="images/shop/pro9.jpg"></div>
-                        <div class="pro-txt">
-                            <h6><a href="#">Happy Ninja Shirt</a></h6>
-                            <p class="pro-price">
-                                <del>$25.00</del>
-                                $19.00
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <!--Pro Box End-->
-                <!--Pro Box Start-->
-                <div class="col-md-4 col-sm-6">
-                    <div class="product-box">
-                        <div class="pro-thumb"><a href="#">Add To Cart</a> <img alt="" src="images/shop/pro10.jpg">
-                        </div>
-                        <div class="pro-txt">
-                            <h6><a href="#">Woo corlor shirt</a></h6>
-                            <p class="pro-price">
-                                <del>$25.00</del>
-                                $19.00
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <!--Pro Box End-->
-                <!--Pro Box Start-->
-                <div class="col-md-4 col-sm-6">
-                    <div class="product-box">
-                        <div class="pro-thumb"><a href="#">Add To Cart</a> <img alt="" src="images/shop/pro11.jpg">
-                        </div>
-                        <div class="pro-txt">
-                            <h6><a href="#">Premium Quality</a></h6>
-                            <p class="pro-price">
-                                <del>$25.00</del>
-                                $19.00
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <!--Pro Box End-->
-                <!--Pro Box Start-->
-                <div class="col-md-4 col-sm-6">
-                    <div class="product-box">
-                        <div class="pro-thumb"><a href="#">Add To Cart</a> <img alt="" src="images/shop/pro12.jpg">
-                        </div>
-                        <div class="pro-txt">
-                            <h6><a href="#">Ninja Silhouette</a></h6>
-                            <p class="pro-price">
-                                <del>$25.00</del>
-                                $19.00
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <!--Pro Box End-->
+      <div class="box">
+         <div class="image">
+            <img src="images/course-2-3.jpg" alt="">
+            <h3>mathemetics</h3>
+         </div>
+         <div class="content">
+            <h3>choose what's best for you!</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque, odit!</p>
+            <a href="#" class="btn">read more</a>
+            <div class="icons">
+               <span> <i class="fas fa-book"></i> 12 modules </span>
+               <span> <i class="fas fa-clock"></i> 6 hours </span>
             </div>
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="gt-pagination">
-                        <nav>
-                            <ul class="pagination">
-                                <li class="page-item"><a aria-label="Previous" class="page-link" href="#"> <i
-                                        class="fas fa-angle-left"></i> </a></li>
-                                <li class="page-item"><a class="page-link" href="#">1</a></li>
-                                <li class="page-item active"><a class="page-link" href="#">2</a></li>
-                                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                <li class="page-item"><a aria-label="Next" class="page-link" href="#"> <i
-                                        class="fas fa-angle-right"></i> </a></li>
-                            </ul>
-                        </nav>
-                    </div>
-                </div>
+         </div>
+      </div>
+
+      <div class="box">
+         <div class="image">
+            <img src="images/course-2-4.jpg" alt="">
+            <h3>doctor</h3>
+         </div>
+         <div class="content">
+            <h3>choose what's best for you!</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque, odit!</p>
+            <a href="#" class="btn">read more</a>
+            <div class="icons">
+               <span> <i class="fas fa-book"></i> 12 modules </span>
+               <span> <i class="fas fa-clock"></i> 6 hours </span>
             </div>
-        </div>
-    </section>
-    <!--Contact End-->
-    <!-- footer section starts  -->
+         </div>
+      </div>
 
-    <section class="footer">
-
-        <div class="box-container">
-
-            <div class="box">
-                <h3><i class="fas fa-lightbulb"></i> EcoEarth </h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, voluptatem.</p>
-                <div class="share">
-                    <a class="fab fa-facebook-f" href="#"></a>
-                    <a class="fab fa-twitter" href="#"></a>
-                    <a class="fab fa-instagram" href="#"></a>
-                    <a class="fab fa-linkedin" href="#"></a>
-                </div>
+      <div class="box">
+         <div class="image">
+            <img src="images/course-2-5.jpg" alt="">
+            <h3>science</h3>
+         </div>
+         <div class="content">
+            <h3>choose what's best for you!</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque, odit!</p>
+            <a href="#" class="btn">read more</a>
+            <div class="icons">
+               <span> <i class="fas fa-book"></i> 12 modules </span>
+               <span> <i class="fas fa-clock"></i> 6 hours </span>
             </div>
+         </div>
+      </div>
 
-            <div class="box">
-                <h3>quick links</h3>
-                <a class="link" href="index.html">home</a>
-                <a class="link" href="./static/about.html">about</a>
-                <a class="link" href="./static/courses.html">Blogs</a>
-                <a class="link" href="./static/contact.html">contact</a>
+      <div class="box">
+         <div class="image">
+            <img src="images/course-2-6.jpg" alt="">
+            <h3>business</h3>
+         </div>
+         <div class="content">
+            <h3>choose what's best for you!</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque, odit!</p>
+            <a href="#" class="btn">read more</a>
+            <div class="icons">
+               <span> <i class="fas fa-book"></i> 12 modules </span>
+               <span> <i class="fas fa-clock"></i> 6 hours </span>
             </div>
+         </div>
+      </div>
 
-            <div class="box">
-                <h3>useful links</h3>
-                <a class="link" href="#">help center</a>
-                <a class="link" href="#">ask questions</a>
-                <a class="link" href="#">send feedback</a>
-                <a class="link" href="#">private policy</a>
-                <a class="link" href="#">terms of use</a>
+      <div class="box hide">
+         <div class="image">
+            <img src="images/course-2-7.jpg" alt="">
+            <h3>teaching</h3>
+         </div>
+         <div class="content">
+            <h3>choose what's best for you!</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque, odit!</p>
+            <a href="#" class="btn">read more</a>
+            <div class="icons">
+               <span> <i class="fas fa-book"></i> 12 modules </span>
+               <span> <i class="fas fa-clock"></i> 6 hours </span>
             </div>
+         </div>
+      </div>
 
-            <div class="box">
-                <h3>newsletter</h3>
-                <p>subscribe for latest upadates</p>
-                <form action="">
-                    <input class="email" id="" name="" placeholder="enter your email" type="email">
-                    <input class="btn" type="submit" value="subscribe">
-                </form>
+      <div class="box hide">
+         <div class="image">
+            <img src="images/course-2-8.jpg" alt="">
+            <h3>designing</h3>
+         </div>
+         <div class="content">
+            <h3>choose what's best for you!</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque, odit!</p>
+            <a href="#" class="btn">read more</a>
+            <div class="icons">
+               <span> <i class="fas fa-book"></i> 12 modules </span>
+               <span> <i class="fas fa-clock"></i> 6 hours </span>
             </div>
+         </div>
+      </div>
 
-        </div>
+      <div class="box hide">
+         <div class="image">
+            <img src="images/course-2-9.jpg" alt="">
+            <h3>dancing</h3>
+         </div>
+         <div class="content">
+            <h3>choose what's best for you!</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque, odit!</p>
+            <a href="#" class="btn">read more</a>
+            <div class="icons">
+               <span> <i class="fas fa-book"></i> 12 modules </span>
+               <span> <i class="fas fa-clock"></i> 6 hours </span>
+            </div>
+         </div>
+      </div>
 
-        <div class="credit"> created by <span>EcoEarth</span> | all rights reserved!</div>
+   </div>
 
-    </section>
+   <div class="load-more"> <div class="btn">load more</div> </div>
 
-    <!-- footer section ends -->
+</section>
+
+
+   <!-- footer section starts  -->
+
+<section class="footer adjdiv">
+
+   <div class="box-container">
+
+      <div class="box">
+         <h3> <i class="fas fa-lightbulb"></i> EcoEarth </h3>
+         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, voluptatem.</p>
+         <div class="share">
+            <a href="#" class="fab fa-facebook-f"></a>
+            <a href="#" class="fab fa-twitter"></a>
+            <a href="#" class="fab fa-instagram"></a>
+            <a href="#" class="fab fa-linkedin"></a>
+         </div>
+      </div>
+
+      <div class="box">
+         <h3>quick links</h3>
+         <a href="index.html" class="link">home</a>
+         <a href="./static/about.html" class="link">about</a>
+         <a href="./static/courses.html" class="link">Blogs</a>
+         <a href="./static/contact.html" class="link">contact</a>
+      </div>
+
+      <div class="box">
+         <h3>useful links</h3>
+         <a href="#" class="link">help center</a>
+         <a href="#" class="link">ask questions</a>
+         <a href="#" class="link">send feedback</a>
+         <a href="#" class="link">private policy</a>
+         <a href="#" class="link">terms of use</a>
+      </div>
+
+      <div class="box">
+         <h3>newsletter</h3>
+         <p>subscribe for latest upadates</p>
+         <form action="">
+            <input type="email" name="" placeholder="enter your email" id="" class="email">
+            <input type="submit" value="subscribe" class="btn">
+         </form>
+      </div>
+
+   </div>
+
+   <div class="credit"> created by <span>EcoEarth</span> | all rights reserved! </div>
+
+</section>
+
+<!-- footer section ends -->
+
 </div>
 
 
@@ -347,15 +290,6 @@
 <!-- custom js file link  -->
 <script src="./static/css/script.js"></script>
 
-<!--   JS Files Start  -->
-<script src="js/jquery-3.3.1.min.js"></script>
-<script src="js/jquery-migrate-1.4.1.min.js"></script>
-<script src="js/popper.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/owl.carousel.min.js"></script>
-<script src="js/jquery.prettyPhoto.js"></script>
-<script src="js/isotope.min.js"></script>
-<script src="js/custom.js"></script>
 </body>
 
 
