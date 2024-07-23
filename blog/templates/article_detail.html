@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="container mt-4">
+    <h1 class="display-4">{{ object.title }}</h1>
+    <p class="lead">By: {{ object.author }}</p>
+    <p class="text-muted">{{ object.author.email }}</p>
+
+    {% if object.header_image %}
+    <img src="{{ object.header_image.url }}" class="img-fluid mb-4" alt="{{ object.title }}">
+    {% endif %}
+
+    <p>{{ object.content }}</p>
+
+    <a href="{% url 'home' %}" class="btn btn-outline-success mt-4">Back</a>
+
+    <hr class="my-4">
+</div>
+
+{% endblock %}
