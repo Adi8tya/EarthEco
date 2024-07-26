@@ -1,298 +1,66 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-   <meta charset="UTF-8">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Shop </title>
+{% extends 'myapp/base.html' %}
+{% load static %}
+{% block body_block %}
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-   <!-- font awesome cdn link  -->
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <!-- font awesome cdn link  -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
-   <!-- swiper css link  -->
-   <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+        <!-- swiper css link  -->
+        <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
 
-   <!-- custom css file link  -->
-   <link rel="stylesheet" href="./static/css/style.css">
+        <link rel="stylesheet" type="text/css" href="{% static 'myapp/style.css' %}"/>
+        <title>eBook APP - {% block title %}Welcome!{% endblock %}</title>
+    </head>
 
-</head>
-<body>
-<div class="wrapper">
-<!-- header section starts  -->
+    <div class="form-container">
+    <h1>Search Eco Products</h1>
+    <form method="get">
+        {{ form.as_p }}
+        <button type="submit">Search</button>
+    </form>
+    </div>
+    {% if results %}
+        <h3>Hurray! We do have the Product at our Store, Here is the Description</h3>
+        <ul>
+            {% for product in results %}
+                <li>
+                    <h3>Name of the Product: {{ product.name }}</h3>
+                    <h3>Category of the Product: {{ product.get_category_display }}</h3>
+                    <h3>Price of the Product: ${{ product.price }}</h3>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <h3>Sorry! We do not have the product you are looking for.</h3>
+    {% endif %}
 
-<header class="header">
-
-   <a href="#" class="logo"> <i class="fas fa-lightbulb"></i> EcoEarth </a>
-
-   <nav class="navbar">
-      <div id="close-navbar" class="fas fa-times"></div>
-      <a href="index.html">home</a>
-      <a href="./static/about.html">about</a>
-      <a href="./static/courses.html">Blogs</a>
-      <a href="./static/contact.html">contact</a>
-   </nav>
-
-   <div class="icons">
-      <div id="account-btn" class="fas fa-user"></div>
-      <div id="menu-btn" class="fas fa-bars"></div>
-   </div>
-
-</header>
-
-<!-- account form section starts  -->
-
-<div class="account-form">
-
-   <div id="close-form" class="fas fa-times"></div>
-
-   <div class="buttons">
-      <span class="btn active login-btn">login</span>
-      <span class="btn register-btn">register</span>
-   </div>
-
-   <form class="login-form active" action="">
-      <h3>login now</h3>
-      <input type="email" placeholder="enter your email" class="box">
-      <input type="password" placeholder="enter your password" class="box">
-      <div class="flex">
-         <input type="checkbox" name="" id="remember-me">
-         <label for="remember-me">remember me</label>
-         <a href="#">forgot password?</a>
-      </div>
-      <input type="submit" value="login now" class="btn">
-   </form>
-
-   <form class="register-form" action="">
-      <h3>register now</h3>
-      <input type="email" placeholder="enter your email" class="box">
-      <input type="password" placeholder="enter your password" class="box">
-      <input type="password" placeholder="confirm your password" class="box">
-      <input type="submit" value="register now" class="btn">
-   </form>
-
-</div>
-
-<!-- account form section ends -->
-
-<!-- header section ends -->
-
-<section class="courses">
-
-   <h1 class="heading"> Shop </h1>
-
-   <div class="box-container">
-
-      <div class="box">
-         <div class="image">
-            <img src="store/images/bamboo%20plate%208.99.jpg" alt="" style="height: auto; width: 100%">
-         </div>
-         <div class="content">
-            <h3>Bamboo Plate</h3>
-            <a href="#" class="btn">Add to Cart</a>
-            <br>
-            <br>
-            <h2>$8.00</h2>
-         </div>
-      </div>
-
-      <div class="box">
-         <div class="image">
-            <img src="store/images/bamboo%20toilet%20paper%2040.99.jpg" alt="" style="height: auto; width: 100%">
-         </div>
-         <div class="content">
-            <h3>Bamboo Toilet Paper</h3>
-            <a href="#" class="btn">Add to Cart</a>
-            <br>
-            <br>
-            <h2>$40.99</h2>
-         </div>
-      </div>
-
-      <div class="box">
-         <div class="image">
-            <img src="store/images/bamboo%20tooth%20brush%20pack%20of%2010%2010.00.jpg" alt="" style="height: auto; width: 100%">
-         </div>
-         <div class="content">
-            <h3>Bamboo touthbrush pack 10</h3>
-            <a href="#" class="btn">Add to Cart</a>
-            <br>
-            <br>
-            <h2>$10.00</h2>
-         </div>
-      </div>
-
-      <div class="box">
-         <div class="image">
-            <img src="store/images/bidegradable%20sponges%2023.99.jpg" alt="" style="height: auto; width: 100%">
-         </div>
-         <div class="content">
-            <h3>Eco Kitchen Sponges</h3>
-            <a href="#" class="btn">Add to Cart</a>
-            <br>
-            <br>
-            <h2>$23.99</h2>
-         </div>
-      </div>
-
-      <div class="box">
-         <div class="image">
-            <img src="store/images/biodegradable%20trash%20bags%2019.99.jpg" alt="" style="height: auto; width: 100%">
-         </div>
-         <div class="content">
-            <h3>Biodegradable trash bags</h3>
-            <a href="#" class="btn">Add to Cart</a>
-            <br>
-            <br>
-            <h2>$19.99</h2>
-         </div>
-      </div>
-
-      <div class="box">
-         <div class="image">
-            <img src="store/images/coffee%20straws%2019.45.jpg" alt="" style="height: auto; width: 100%">
-         </div>
-         <div class="content">
-            <h3>Coffee Straws</h3>
-            <a href="#" class="btn">Add to Cart</a>
-            <br>
-            <br>
-            <h2>$19.45</h2>
-         </div>
-      </div>
-
-      <div class="box hide">
-         <div class="image">
-            <img src="store/images/paper%20bowl%20125%20pack%2022.99.jpg" alt="" style="height: auto; width: 100%">
-         </div>
-         <div class="content">
-            <h3>Paper Bowl Pack of 125</h3>
-            <a href="#" class="btn">Add to Cart</a>
-            <br>
-            <br>
-            <h2>$22.99</h2>
-         </div>
-      </div>
-
-      <div class="box hide">
-         <div class="image">
-            <img src="store/images/paper%20cups%20300%2015.99.jpg" alt="" style="height: auto; width: 100%">
-         </div>
-         <div class="content">
-            <h3>Paper Cups Pack of 300</h3>
-            <a href="#" class="btn">Add to Cart</a>
-            <br>
-            <br>
-            <h2>$15.99</h2>
-         </div>
-      </div>
-
-      <div class="box hide">
-         <div class="image">
-            <img src="store/images/soy%20wax%20candle%2020.00.jpg" alt="" style="height: auto; width: 100%">
-         </div>
-         <div class="content">
-            <h3>Soy wax candle</h3>
-            <a href="#" class="btn">Add to Cart</a>
-            <br>
-            <br>
-            <h2>$20.00</h2>
-         </div>
-      </div>
-
-      <div class="box hide">
-         <div class="image">
-            <img src="store/images/sustainable-storage-basket-rattan-organized%2065.99.jpg" alt="" style="height: auto; width: 100%">
-         </div>
-         <div class="content">
-            <h3>Storage Basket</h3>
-            <a href="#" class="btn">Add to Cart</a>
-            <br>
-            <br>
-            <h2>$65.99</h2>
-         </div>
-      </div>
-
-      <div class="box hide">
-         <div class="image">
-            <img src="store/images/wooden%20fork%20pack%20of%20100%209.99.jpg" alt="" style="height: auto; width: 100%">
-         </div>
-         <div class="content">
-            <h3>Wooden Fork pack of 100</h3>
-            <a href="#" class="btn">Add to Cart</a>
-            <br>
-            <br>
-            <h2>$9.99</h2>
-         </div>
-      </div>
-
-   </div>
-
-   <div class="load-more"> <div class="btn">load more</div> </div>
-
+    <section class="courses">
+    <div class="box-container">
+        {% for product in products %}
+        <div class="box">
+            <div class="image">
+                <img src="{% static product.image_url %}" alt="{{ product.name }}" style="height: auto; width: 100%">
+            </div>
+            <div class="content">
+                <h3>{{ product.name }}</h3>
+                <p>Category: {{ product.get_category_display }}</p>
+                <a href="#" class="btn">Add to Cart</a>
+                <br><br>
+                <h2>${{ product.price }}</h2>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
 </section>
 
+    <!-- footer section ends -->
 
-   <!-- footer section starts  -->
-
-<section class="footer adjdiv">
-
-   <div class="box-container">
-
-      <div class="box">
-         <h3> <i class="fas fa-lightbulb"></i> EcoEarth </h3>
-         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, voluptatem.</p>
-         <div class="share">
-            <a href="#" class="fab fa-facebook-f"></a>
-            <a href="#" class="fab fa-twitter"></a>
-            <a href="#" class="fab fa-instagram"></a>
-            <a href="#" class="fab fa-linkedin"></a>
-         </div>
-      </div>
-
-      <div class="box">
-         <h3>quick links</h3>
-         <a href="index.html" class="link">home</a>
-         <a href="./static/about.html" class="link">about</a>
-         <a href="./static/courses.html" class="link">Blogs</a>
-         <a href="./static/contact.html" class="link">contact</a>
-      </div>
-
-      <div class="box">
-         <h3>useful links</h3>
-         <a href="#" class="link">help center</a>
-         <a href="#" class="link">ask questions</a>
-         <a href="#" class="link">send feedback</a>
-         <a href="#" class="link">private policy</a>
-         <a href="#" class="link">terms of use</a>
-      </div>
-
-      <div class="box">
-         <h3>newsletter</h3>
-         <p>subscribe for latest upadates</p>
-         <form action="">
-            <input type="email" name="" placeholder="enter your email" id="" class="email">
-            <input type="submit" value="subscribe" class="btn">
-         </form>
-      </div>
-
-   </div>
-
-   <div class="credit"> created by <span>EcoEarth</span> | all rights reserved! </div>
-
-</section>
-
-<!-- footer section ends -->
-
-</div>
+    <!-- swiper js link  -->
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
 
 
-<!-- swiper js link  -->
-<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
-
-<!-- custom js file link  -->
-<script src="./static/css/script.js"></script>
-
-</body>
-
-
-</html>
+    <!-- custom js file link  -->
+    <script src="/myapp/static/myapp/script.js"></script>
+{% endblock %}
