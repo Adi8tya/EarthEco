@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static 'myapp/style.css' %}"/>
+    <title>eBook APP - {% block title %}Welcome!{% endblock %}</title>
+</head>
+<body>
+
+
+<header class="header">
+
+    <a href="#" class="logo"> <i class="fas fa-lightbulb"></i> EcoEarth </a>
+
+    <nav class="navbar">
+        <div id="close-navbar" class="fas fa-times"></div>
+        <a href="{% url 'myapp:indexEco' %}">Home</a>
+        <a href="{% url 'myapp:about' %}">About</a>
+        <a href="{% url 'myapp:findbooks' %}">Find Books</a>
+        <a href="{% url 'myapp:review' %}">Review</a>
+        <a href="{% url 'myapp:place_order' %}">Place Order</a>
+        <a href="/myapp/templates/myapp/shop.html">Shop</a>
+
+    </nav>
+
+    <div class="icons">
+        <div id="account-btn" class="fas fa-user"></div>
+        <div id="menu-btn" class="fas fa-bars"></div>
+    </div>
+
+</header>
+
+
+{#_____#}
+
+
+<main class="mainClass">
+    <div class="container">
+{#        <h1>{% block myhdg %}Hello Aditya {% endblock %}</h1>#}
+        {% block body_block %}*** {% endblock %}
+    </div>
+</main>
+
+
+<!-- footer section starts  -->
+
+<section class="footer">
+
+    <div class="box-container">
+
+        <div class="box">
+            <h3><i class="fas fa-lightbulb"></i> EcoEarth </h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, voluptatem.</p>
+            <div class="share">
+                <a href="#" class="fab fa-facebook-f"></a>
+                <a href="#" class="fab fa-twitter"></a>
+                <a href="#" class="fab fa-instagram"></a>
+                <a href="#" class="fab fa-linkedin"></a>
+            </div>
+        </div>
+
+        <div class="box">
+            <h3>quick links</h3>
+            <a href="index.html" class="link">home</a>
+            <a href="./static/about.html" class="link">about</a>
+            <a href="./static/courses.html" class="link">Blogs</a>
+            <a href="./static/contact.html" class="link">contact</a>
+        </div>
+
+        <div class="box">
+            <h3>useful links</h3>
+            <a href="#" class="link">help center</a>
+            <a href="#" class="link">ask questions</a>
+            <a href="#" class="link">send feedback</a>
+            <a href="#" class="link">private policy</a>
+            <a href="#" class="link">terms of use</a>
+        </div>
+
+        <div class="box">
+            <h3>newsletter</h3>
+            <p>subscribe for latest upadates</p>
+            <form action="">
+                <input type="email" name="" placeholder="enter your email" id="" class="email">
+                <input type="submit" value="subscribe" class="btn">
+            </form>
+        </div>
+
+    </div>
+
+    <div class="credit"> created by <span>EcoEarth</span> | all rights reserved!</div>
+
+</section>
+
+<!-- footer section ends -->
+</body>
+</html>

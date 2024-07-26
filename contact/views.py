@@ -4,6 +4,7 @@ from django.template.loader import render_to_string
 from contact.forms import ContactForm
 from django.core.mail import send_mail
 
+
 def contact(request):
     if request.method == 'POST':
         form = ContactForm(request.POST)

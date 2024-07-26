@@ -1,0 +1,12 @@
+<!-- myapp/templates/myapp/request_service.html -->
+{% extends 'myapp/base.html' %}
+{% block body_block %}
+    <div class="form-container">
+    <h1>Request a New EcoEarth Service</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Submit</button>
+    </form>
+    </div>
+{% endblock %}

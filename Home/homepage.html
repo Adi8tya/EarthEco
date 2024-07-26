@@ -1,0 +1,332 @@
+
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+ <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+   <!-- swiper css link  -->
+   <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" type="text/css" href="{% static 'myapp/style.css' %}"/>
+    <title>eBook APP - {% block title %}Welcome!{% endblock %}</title>
+</head>
+<body>
+
+
+<header class="header">
+
+    <a href="#" class="logo"> <i class="fas fa-lightbulb"></i> EcoEarth </a>
+
+    <nav class="navbar">
+        <div id="close-navbar" class="fas fa-times"></div>
+        <a href="{% url 'myapp:indexEco' %}">Home</a>
+        <a href="{% url 'myapp:about' %}">About</a>
+        <a href="{% url 'myapp:findbooks' %}">Blog</a>
+        <a href="{% url 'myapp:review' %}">Contact Us</a>
+        <a href="{% url 'myapp:place_order' %}">Join Team</a>
+        <a href="/myapp/templates/myapp/shop.html">Shop</a>
+
+    </nav>
+
+    <div class="icons">
+        <div id="account-btn" class="fas fa-user"></div>
+        <div id="menu-btn" class="fas fa-bars"></div>
+    </div>
+
+</header>
+
+
+
+<div class="account-form">
+
+   <div id="close-form" class="fas fa-times"></div>
+
+   <div class="buttons">
+      <span class="btn active login-btn">login</span>
+      <span class="btn register-btn">register</span>
+   </div>
+
+   <form class="login-form active" action="">
+      <h3>login now</h3>
+      <input type="email" placeholder="enter your email" class="box">
+      <input type="password" placeholder="enter your password" class="box">
+      <div class="flex">
+         <input type="checkbox" name="" id="remember-me">
+         <label for="remember-me">remember me</label>
+         <a href="#">forgot password?</a>
+      </div>
+      <input type="submit" value="login now" class="btn">
+   </form>
+
+   <form class="register-form" action="">
+      <h3>register now</h3>
+      <input type="email" placeholder="enter your email" class="box">
+      <input type="password" placeholder="enter your password" class="box">
+      <input type="password" placeholder="confirm your password" class="box">
+      <input type="submit" value="register now" class="btn">
+   </form>
+
+</div>
+
+<!-- account form section ends -->
+
+<!-- header section ends -->
+
+<!-- home section starts  -->
+
+<section class="home">
+
+   <div class="swiper home-slider">
+
+      <div class="swiper-wrapper">
+
+         <section class="swiper-slide slide" style="background: url({% static 'myapp/images/home-slide-1.jpg' %})  no-repeat;">
+            <div class="content">
+               <h3>Protecting Our Planet</h3>
+               <p>Join EarthEco in our mission to protect and preserve the environment for future generations.</p>
+                <a href="{% url 'myapp:join_team' %}" class="btn">Get Started</a>
+            </div>
+         </section>
+
+         <section class="swiper-slide slide" style="background: url({% static 'myapp/images/home-slide-2.jpg' %}) no-repeat;">
+            <div class="content">
+               <h3>Sustainable Living</h3>
+               <p>Learn about sustainable practices that can help reduce your carbon footprint.</p>
+               <a href="#" class="btn">get started</a>
+            </div>
+         </section>
+
+         <section class="swiper-slide slide" style="background: url({% static 'myapp/images/home-slide-3.jpg' %}) no-repeat;">
+            <div class="content">
+               <h3>Community Involvement</h3>
+               <p>Discover how you can get involved in local initiatives and make a difference in your community.</p>
+               <a href="{% url 'myapp:request_service' %}" class="btn">Get Started</a>
+            </div>
+         </section>
+
+      </div>
+
+      <div class="swiper-pagination"></div>
+
+   </div>
+
+</section>
+
+<!-- home section ends -->
+
+<!-- subjects section starts  -->
+
+<section class="subjects">
+
+   <h1 class="heading">EarthEco's Initiatives</h1>
+
+   <div class="box-container">
+
+      <div class="box">
+         <img src="{% static 'myapp/images/subject-icon-1.png' %}" alt="">
+         <h3>Conservation Efforts</h3>
+         <p>Learn about our efforts to conserve wildlife and natural habitats.</p>
+      </div>
+      <div class="box">
+         <img src="{% static 'myapp/images/subject-icon-2.png' %}" alt="">
+         <h3>Clean Energy</h3>
+         <p>Explore our projects promoting the use of clean and renewable energy sources.</p>
+      </div>
+      <div class="box">
+         <img src="{% static 'myapp/images/subject-icon-3.png' %}" alt="">
+         <h3>Community Outreach</h3>
+         <p>Get involved in our community outreach programs aimed at educating the public about environmental issues.</p>
+      </div>
+      <div class="box">
+         <img src="{% static 'myapp/images/subject-icon-4.png' %}" alt="">
+         <h3>Sustainable Agriculture</h3>
+         <p>Discover our initiatives to promote sustainable farming practices.</p>
+      </div>
+      <div class="box">
+         <img src="{% static 'myapp/images/subject-icon-5.png' %}" alt="">
+         <h3>Environmental Education</h3>
+         <p>Join our educational programs designed to raise awareness about environmental conservation.</p>
+      </div>
+      <div class="box">
+         <img src="{% static 'myapp/images/subject-icon-6.png' %}" alt="">
+         <h3>Water Conservation</h3>
+         <p>Learn about our water conservation projects and how you can help.</p>
+      </div>
+
+   </div>
+
+</section>
+
+<!-- subjects section ends -->
+
+<!-- home courses slider section starts  -->
+
+<section class="home-courses">
+   <h1 class="heading"> Blogs </h1>
+   <div class="swiper home-courses-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide">
+            <div class="image">
+               <h3>Reducing Plastic Waste</h3>
+            </div>
+            <div class="content">
+               <h3>Reducing Plastic Waste</h3>
+               <p>Learn how to reduce plastic waste in your daily life with these simple tips.</p>
+            </div>
+         </div>
+         <div class="swiper-slide slide">
+            <div class="image">
+               <h3>Eco-Friendly Travel</h3>
+            </div>
+            <div class="content">
+               <h3>Eco-Friendly Travel</h3>
+               <p>Discover how to travel sustainably and minimize your impact on the environment.</p>
+            </div>
+         </div>
+         <div class="swiper-slide slide">
+            <div class="image">
+               <h3>Green Home Improvements</h3>
+            </div>
+            <div class="content">
+               <h3>Green Home Improvements</h3>
+               <p>Explore ways to make your home more eco-friendly with these green improvements.</p>
+            </div>
+         </div>
+         <div class="swiper-slide slide">
+            <div class="image">
+               <h3>Urban Gardening</h3>
+            </div>
+            <div class="content">
+               <h3>Urban Gardening</h3>
+               <p>Get started with urban gardening and grow your own food in the city.</p>
+            </div>
+         </div>
+         <div class="swiper-slide slide">
+            <div class="image">
+               <h3>Climate Change Mitigation</h3>
+            </div>
+            <div class="content">
+               <h3>Climate Change Mitigation</h3>
+               <p>Learn about efforts to mitigate climate change and how you can contribute.</p>
+            </div>
+         </div>
+         <div class="swiper-slide slide">
+            <div class="image">
+               <h3>Zero-Waste Living</h3>
+            </div>
+            <div class="content">
+               <h3>Zero-Waste Living</h3>
+               <p>Find out how to live a zero-waste lifestyle and reduce your environmental impact.</p>
+            </div>
+         </div>
+      </div>
+   </div>
+
+</section>
+
+<!-- home courses slider section ends -->
+
+<!-- footer section starts  -->
+
+<section class="footer">
+
+   <div class="box-container">
+
+      <div class="box">
+         <h3> <i class="fas fa-lightbulb"></i> EcoEarth </h3>
+         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, voluptatem.</p>
+         <div class="share">
+            <a href="#" class="fab fa-facebook-f"></a>
+            <a href="#" class="fab fa-twitter"></a>
+            <a href="#" class="fab fa-instagram"></a>
+            <a href="#" class="fab fa-linkedin"></a>
+         </div>
+      </div>
+
+      <div class="box">
+         <h3>quick links</h3>
+         <a href="index.html" class="link">home</a>
+         <a href="./static/about.html" class="link">about</a>
+         <a href="./static/courses.html" class="link">Blogs</a>
+         <a href="./static/contact.html" class="link">contact</a>
+      </div>
+
+      <div class="box">
+         <h3>useful links</h3>
+         <a href="#" class="link">help center</a>
+         <a href="#" class="link">ask questions</a>
+         <a href="#" class="link">send feedback</a>
+         <a href="#" class="link">private policy</a>
+         <a href="#" class="link">terms of use</a>
+      </div>
+
+      <div class="box">
+         <h3>newsletter</h3>
+         <p>subscribe for latest upadates</p>
+         <form action="">
+            <input type="email" name="" placeholder="enter your email" id="" class="email">
+            <input type="submit" value="subscribe" class="btn">
+         </form>
+      </div>
+
+   </div>
+
+   <div class="credit"> created by <span>EcoEarth</span> | all rights reserved! </div>
+
+</section>
+
+<!-- footer section ends -->
+
+<!-- swiper js link  -->
+<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+
+<!-- custom js file link  -->
+<!-- swiper js link  -->
+<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+
+<!-- Swiper initialization script -->
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    var swiper = new Swiper('.home-slider', {
+        loop: true,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+    });
+
+    var courseSwiper = new Swiper('.home-courses-slider', {
+        loop: true,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        slidesPerView: 3,
+        spaceBetween: 30,
+        breakpoints: {
+            640: {
+                slidesPerView: 1,
+                spaceBetween: 20,
+            },
+            768: {
+                slidesPerView: 2,
+                spaceBetween: 30,
+            },
+            1024: {
+                slidesPerView: 3,
+                spaceBetween: 40,
+            },
+        },
+    });
+});
+</script>
+
+</body>
+</html>
